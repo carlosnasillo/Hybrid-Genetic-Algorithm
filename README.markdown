@@ -1,5 +1,5 @@
->#Polymorphic Virus Signature Recognition 
-#via Hybrid Genetic Algorithm
+>##Polymorphic Virus Signature Recognition 
+##via Hybrid Genetic Algorithm
 ####Carlos Alberto Nasillo González
 
 ####**ABSTRACT**
@@ -72,9 +72,13 @@ Besides all the previously reviewed material on genetic algorithms, specifically
 
    Polymorphic viruses confuse malware detection technologies by code obfuscation, which produces changes in their low-level structure (Figure 2 [31]) and thus making detection hard due to the modification of their hex signature. 
 
+ ![figure2](http://i.imgur.com/19pCo.png)
+
       Figure 2: Example of low-level code obfuscation (in grey) and signature modification through format alteration.
    
    However, computer malware can be written in a variety of programming languages, and different programming languages are handled in different ways; some are compiled directly into machine code (binary executables), while some are converted to instruction files (byte-code) that are then interpreted during execution into machine code (low-level).
+
+ ![figure3](http://imgur.com/DbhOP.png)
 
       Figure 3: Programming Languages illustration, Compiled vs. Interpreted execution.
    Although, byte-code obfuscation (mid-level) equally results in modifications to the low-level structure of the program, it becomes much harder to obtain static signatures definitions as a vast number of interpreters will need to be developed and implemented to translate, as a whole, the byte-code instruction file into machine language. For that reason, the scope of the proposed system will remain on binary executables and static files such as documents.
@@ -106,11 +110,14 @@ Unconnected statements are inserted to confuse detection, while not altering the
 **_Code Transportation_**
 Consecutive statements are dispersed and associated together by unconditional jumps using goto statements.
 
+ ![figure4](http://imgur.com/T24yb.png)
 
      Figure 4: Examples of high-level polymorphism 
      
 For complexity and space considerations, three of the above discussed obfuscation techniques are illustrated (Figure 5 [31]) in low-level terms. It is important to remark that the assembly program in the stated figure bellow is not related in terms of functionality to the one provided in Figure 4 (a).
- 
+
+ ![figure5](http://imgur.com/prbVO.png)
+
     Figure 5: Illustration of various changes occurred at low-level though polymorphism.
 
 ####**3.3.	Genetic Algorithms**
@@ -401,7 +408,7 @@ Depending on the above, the program will either stop executing but remain open, 
    Once the genetic algorithm has finished and the best evolved chromosome identified, upon user request, the signature is re-evaluated using the Heuristic Grading Framework to corroborate that the evolution process has returned an equally high fidelity match for both the suspect file and the initially signature matches. The outcome of this evaluation can be either; unsuccessful, low fidelity or high fidelity. An unsuccessful evolutive signature is that which does not return a match for any of the initial heuristic variants, low fidelity are those with an average grade of over 40% but less than 65%. All matches above 65% are high fidelity and it can be considered as a successful detection and evolution of the polymorphic virus.
   
 
-####**6.3.	Problems Encountered & Solutions **
+####**6.3.	Problems Encountered & Solutions**
 
   During the development of the proposed system several problems arose and decisions on how to approach each problem where achieved by performing further background reading on the topics in question. All through this section we will expand on such pitfalls and the solutions proposed to resolve them.
 
@@ -429,20 +436,6 @@ Problem Approach: We implemented multi-threading programming into the program by
   
   Table 1 contains a set of randomly selected polymorphic virus variants for testing each of the main components of the system. On all of these variants one or more forms of polymorphism techniques have been used. 
 
-Virus Name
-Polymorphic Variants
-
-Austr
-Austr.152, Austr.155, Austr.217, Austr.221,
-Camel
-Camel.402, Camel.443, Camel.496, Camel.514
-Dumb
-Dumb.218, Dumb.579, Dumb.227, Dumb.192
-Brigit
-Brigit.399, Brigit.425, Brigit.301, Brigit.70
-MacGyver
-MacGyver.1098, MacGyver.4112, MacGyver.4643
-
 
 	Table 1: Malware and variants used for tests
 
@@ -453,55 +446,6 @@ MacGyver.1098, MacGyver.4112, MacGyver.4643
   
   It is important to remark that a grade less than 40% is not considered a match, above that number but below 65% is low fidelity match, and above 65% is considered as a potential variant of the virus.
 
-Virus Name
-Heuristic Avrg
-
-Test against Austr.338
-Austr.152
-51%
-Austr.155
-51%
-Austr.217
-<  40%
-Austr.221
-<  40%
-Test against Camel.443
-Camel.402
-63%
-Camel.500
-<  40%
-Camel.496
-92%
-Camel.514
-92%
-Test against Dumb.193
-Dumb.217
-62%
-Dumb.579
-<  40%
-Dumb.227
-<  40%
-Dumb.192
-97%
-Test against Brigit.88
-Brigit.399
-86%
-Brigit.425
-76%
-Brigit.301
-<  40%
-Brigit.70
-76%
-Test against MacGyver.41B
-MacGyver.1098
-<  40%
-MacGyver.4112
-<  40%
-MacGyver.4643
-<  40%
-TOTAL MATCHES
-10/19
-
 
 	Table 2: Heuristic Matches
 	
@@ -511,56 +455,6 @@ TOTAL MATCHES
   Based on the dataset shown on table 1 and following the results of the Heuristic evaluation illustrated on table 2, whenever possible the process of evolution was carried out with the aim of observing the success rate of the GA for evolving a signature using string matching algorithms as a fitness evaluator. 
  
   Elements of the table set to bold font, are the malware variants that were detected either as a low or high potential match during the heuristic stage. The evaluation fidelity range equals to the limits set on the grading framework.
-
-
-Virus Name
-Evolution Fidelity
-
-Test against evolved Austr.338
-Austr.152
--
-Austr.155
--
-Austr.217
--
-Austr.221
--
-Test against evolved Camel.443
-Camel.402
--
-Camel.500
--
-Camel.496
-Low (56%)
-Camel.514
--
-Test against evolved Dumb.193
-Dumb.217
--
-Dumb.579
--
-Dumb.227
--
-Dumb.192
-Low (61%)
-Test against evolved Brigit.88
-Brigit.399
--
-Brigit.425
--
-Brigit.301
--
-Brigit.70
-Low (47%)
-Test against evolved MacGyver.41B
-MacGyver.1098
--
-MacGyver.4112
--
-MacGyver.4643
--
-TOTAL MATCHES
-3/10
 
 
 	Table 3: Evolution Success rate using GA
