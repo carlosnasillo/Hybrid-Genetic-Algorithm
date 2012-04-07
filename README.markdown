@@ -86,31 +86,24 @@ Along this paper we will discuss code obfuscation in high-level (source code) te
    The following seven techniques are the most commonly used by virus developers and malware mutation engines [16]. Additionally, Figure 4 (b)-(h) [16] respectively, illustrates in source code form the polymorphism variants of a simple program. 
 
 **_Format Alteration_**
-
 It is done by inserting and/or removing comments and blanks lines. This method in comparison to others is the simplest and has the lowest “success” rate.
 
 **_Variable Renaming_**
-
 Involves the consistent modification of variables identifier names throughout the program. Such technique is ineffective against malware detection mechanisms.
 
 **_Statement Rearrangement_**
-
 Is the rearrangement of programs statements, causing a modification in the program structure, without altering behaviour.
 
 **_Statement Replacement_**
-
 Performs changes on the actual statements, usually though mathematical operations, yet the logic remains unaffected. For example, the variable x=1, could be replaced to x=y/5, exploiting the fact that y=5. 
 
 **_Swapping of Control Statements_**
-
 Variables and dependency statements remain unchanged, while changing control statements that produce the same output. For example, the swap of a while loop with a for loop.
 
 **_Junk Code Addition_**
-
 Unconnected statements are inserted to confuse detection, while not altering the original logic of the program. Such code is inert with respect to the rest of the source code.
 
 **_Code Transportation_**
-
 Consecutive statements are dispersed and associated together by unconditional jumps using goto statements.
 
 
