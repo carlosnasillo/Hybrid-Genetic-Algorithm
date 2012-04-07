@@ -90,24 +90,31 @@ Along this paper we will discuss code obfuscation in high-level (source code) te
    The following seven techniques are the most commonly used by virus developers and malware mutation engines [16]. Additionally, Figure 4 (b)-(h) [16] respectively, illustrates in source code form the polymorphism variants of a simple program. 
 
 **_Format Alteration_**
+
 It is done by inserting and/or removing comments and blanks lines. This method in comparison to others is the simplest and has the lowest “success” rate.
 
 **_Variable Renaming_**
+
 Involves the consistent modification of variables identifier names throughout the program. Such technique is ineffective against malware detection mechanisms.
 
 **_Statement Rearrangement_**
+
 Is the rearrangement of programs statements, causing a modification in the program structure, without altering behaviour.
 
 **_Statement Replacement_**
+
 Performs changes on the actual statements, usually though mathematical operations, yet the logic remains unaffected. For example, the variable x=1, could be replaced to x=y/5, exploiting the fact that y=5. 
 
 **_Swapping of Control Statements_**
+
 Variables and dependency statements remain unchanged, while changing control statements that produce the same output. For example, the swap of a while loop with a for loop.
 
 **_Junk Code Addition_**
+
 Unconnected statements are inserted to confuse detection, while not altering the original logic of the program. Such code is inert with respect to the rest of the source code.
 
 **_Code Transportation_**
+
 Consecutive statements are dispersed and associated together by unconditional jumps using goto statements.
 
  ![figure4](http://imgur.com/T24yb.png)
@@ -138,6 +145,7 @@ For complexity and space considerations, three of the above discussed obfuscatio
 
   According with Darwin’s theory of evolution, the best individuals (chromosomes) should have higher survival rate in order to produce offspring. There are several techniques used to achieve that, one of the most widely used being Roulette wheel selection. This method works by placing all of the population’s chromosomes in a “roulette wheel” with the characteristic that higher fitness individuals are given a bigger portion of the wheel, and therefore better chromosomes will have statistically more chances of being selected. Figure 6 illustrates the above.
 
+ ![figure6](http://imgur.com/yL0qL.png)
 
      Figure 6: Roulette wheel selection
      
@@ -149,6 +157,7 @@ For complexity and space considerations, three of the above discussed obfuscatio
 
   As one of the main genetic operators, it function is to vary the “programming” of a chromosome from one generation to the other, however due to the fact that crossover occurs between highly fit individuals, there are high statistical chances that a mixture between both parent will result in a higher fitness offspring. The two main way of performing this technique is through either one, or two points crossover, this second one having an advantage over the first, as it allows genetic material from the middle of both chromosomes to be exchanged, rather than working only with its extremities. Figure 7 exemplifies these procedures. 
 
+ ![figure7](http://i.imgur.com/XjK3W.png?1)
 
      Figure 7: One and two-point crossover
 
@@ -186,10 +195,13 @@ As explained earlier, a crucial component of the proposed system is the heuristi
 
   This algorithm is used to find the longest subsequence common to all sequences in a set of strings. 
 
+ ![figure8](http://i.imgur.com/E2DKT.png)
 
 	Figure 8: Longest Common Subsequence Problem
 	
 In other words, this algorithm finds a sequence of characters S that is present in the same continuous order in any given two strings A and B. For example;
+
+ ![figure9](http://imgur.com/gsCme.png)
 
 	Figure 9: Subsequence Match
 	
@@ -199,15 +211,21 @@ In other words, this algorithm finds a sequence of characters S that is present 
 
   The Longest Common Substring problem is based on first finding the longest common suffix for all pairs for prefixes on the string:
 
+ ![figure10](http://i.imgur.com/LbF3H.png)
+ 
 	Figure 10: Longest Common Suffix Problem
 	
 Then we find the maximal of the common suffixes matches of all the possible prefixes, and these must be the longest common substring of A and B:
+
+ ![figure11](http://i.imgur.com/65Ikf.png)
 
 	Figure 11: Longest Common Substring Problem
 	
 In other words, all this can be summarized as finding the longest string S that is a sub-string of two or more strings. For example; given two strings A and B, of length X and Y respectively, find the longest string which is a substring of both A and B.
 
   This algorithm is tremendously useful when solving the sort of paradigms proposed for the heuristics in our system when trying to find pattern similitudes between tokens. This implementation will allow us to find consistent patterns as well as in some cases exact token matches that will statistically represent very high probabilities of polymorphism (ie, Code transportation).
+
+ ![figure12](http://i.imgur.com/NQiH5.png)
 
 	Figure 12: Substring Match example
 	
@@ -252,6 +270,7 @@ As mentioned earlier in this paper, after thorough testing and evaluating the ef
 
 6.	If Se is re-evaluated using step 3, if a match is returned, then it is added to the known malicious signature database for future use.
 
+ ![figure13](http://i.imgur.com/uVhfc.png)
 
 		Figure 13: Overview of the proposed system
 	
@@ -260,6 +279,7 @@ As mentioned earlier in this paper, after thorough testing and evaluating the ef
 
   The string matching framework is comprised by the three earlier mentioned algorithms; The Longest Common Subsequence, Longest Common Substring and the Levenshtein Distance algorithm. From all of the above, the Longest Common Subsequence carries most of the weight when grading a token. The logic behind it is that as in polymorphic signatures the string is consistently modified and mostly only by a few values, the Subsequence problem return higher matches than the Longest Substring. The following example, illustrates in practice this theory.
 
+ ![figure14](http://i.imgur.com/Ks2jb.png)
 
 	Figure 14: Substring vs Subsequence match
 	
@@ -317,14 +337,19 @@ Finally, another reason why the grading framework was developed in such way is t
 
   On program start the user is presented with user interface from where all the resources (file/signature to scan) are selected and where the settings of both the heuristics and GA can be modified. Figure 14 illustrates the user interface of the program.
 
+ ![figure14](http://i.imgur.com/GuWIt.png)
 
 	Figure 14: Program Interface
 	
   First, the user selects whether he/she desires to examine a suspect hexadecimal signature or a suspicious file for polymorphism. Depending on the choice, the button and text field bellow will change according to the selection. If the user selected to enter a string the text box will become enabled allowing the user to type/paste a string, this string is then validated (See section 6.3) and a success of error icon is display adjacent to the field.
 
+ ![figure15](http://i.imgur.com/AvoMH.png)
+
 	Figure 15: String check input and validation
 	
 This same process is repeated when a user chooses to scan a file, with the difference the button “Enter string” becomes “Select a file” that when pressed displays a file chooser for easier directory browsing, the absolute path to the file selected is then displayed in the disabled text field. This process is also validated to avoid selecting corrupted files, or files without the correct permissions. See screen capture bellow.
+
+ ![figure16](http://i.imgur.com/ruEjb.png)
 
 	Figure 16: File Selection and validation
 	
@@ -332,11 +357,14 @@ This same process is repeated when a user chooses to scan a file, with the diffe
   
   Prior to selecting the files and database, the user has the option to modify the parameters that will be used for the token matching heuristics, these settings will be frozen (disable UI components) to ensure consistent manipulation of strings and therefore avoiding program errors. Figure 17 shows the available settings.
 
+ ![figure17](http://i.imgur.com/Dk6Pt.png)
 
 	Figure 17: Modifiable Heuristic settings
 	
  At this point the user is able to initialize the program, to find possible variants of the suspect file. In order to do so the user clicks the button “Scan” and the string pattern matching algorithms will initialize. Prior and throughout the whole of the program’s execution the user is informed at the program log text area of major events, such as; file selection error or success, and current stages of the detection process. Furthermore a progress bar displays to the user a friendlier estimate of completed and remaining processes.
 
+ ![figure18](http://i.imgur.com/oz972.png)
+ 
 	Figure 18: Program log and Progress bar
 	
 After this initial heuristic string matching stage has finished and depending on the results, the user will be notified the following;
@@ -347,16 +375,20 @@ After this initial heuristic string matching stage has finished and depending on
 
 Depending on the above, the program will either stop executing but remain open, if low fidelity then matches will be displayed in the “Matches Table” (Figure 19) and the user has the option to force GA evolution, and in the case high grade matches are found, then program automatically initializes the genetic algorithm to work on those found variants.
 
+ ![figure19](http://i.imgur.com/D0ppi.png)
 
 	Figure 19: Low fidelity matches returned
 	
   In the events when the genetic algorithm is either forced or started automatically, the progress bar will update its values accordingly with the progress of these procedures. In addition to that the program will inform the user of relevant information of the evolution process such as; highest fitness achieved, current generation and display the current best chromosome. The screen captures of figure 20 demonstrate how this is presented to the user.
 
+ ![figure20](http://i.imgur.com/Ggss6.png)
 
 	Figure 20: GA Evolution information
 	
   Once the signature evolution has been finalized, the program will prompt the user to re-check if desired the evolved signature against the suspicious file and previous variant matches. This is done by selecting the button “Check evolved Signature”, which when pressed will repeat the string matching heuristics on the new data.
 
+ ![figure21](http://i.imgur.com/BqnxU.png)
+ 
 	Figure 21: Prompt for evaluation of evolved signature
 	
   Finally, after the evolved signature has been evaluated, the user will be informed in the program log whether signature evolution and therefore detection was successful or not. If successful the matching variants for the evolved signature of the suspicious file is displayed alone with its grade on the Token Matches table.
@@ -436,6 +468,7 @@ Problem Approach: We implemented multi-threading programming into the program by
   
   Table 1 contains a set of randomly selected polymorphic virus variants for testing each of the main components of the system. On all of these variants one or more forms of polymorphism techniques have been used. 
 
+ ![table1](http://i.imgur.com/WBpHE.png)
 
 	Table 1: Malware and variants used for tests
 
@@ -446,6 +479,7 @@ Problem Approach: We implemented multi-threading programming into the program by
   
   It is important to remark that a grade less than 40% is not considered a match, above that number but below 65% is low fidelity match, and above 65% is considered as a potential variant of the virus.
 
+ ![table2](http://i.imgur.com/jcEgf.png)
 
 	Table 2: Heuristic Matches
 	
@@ -456,6 +490,7 @@ Problem Approach: We implemented multi-threading programming into the program by
  
   Elements of the table set to bold font, are the malware variants that were detected either as a low or high potential match during the heuristic stage. The evaluation fidelity range equals to the limits set on the grading framework.
 
+ ![table3](http://i.imgur.com/lzeTO.png)
 
 	Table 3: Evolution Success rate using GA
 
