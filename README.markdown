@@ -1,5 +1,4 @@
->#Polymorphic Virus Signature Recognition 
-#via Hybrid Genetic Algorithm
+>#Polymorphic Virus Signature Recognition via Hybrid Genetic Algorithm
 ####Carlos Alberto Nasillo González
 
 ####**ABSTRACT**
@@ -511,4 +510,73 @@ Problem Approach: We implemented multi-threading programming into the program by
 </br>
 ####**9.	REFERENCES**
 
-[1]	F-Secure Virus Encyclopedia, available at http://www.f-secure.com/en_EMEA-Labs/virus-encyclopedia/articles/about-viruses/[2]	F. Cohen, Computer Viruses, PhD thesis, University of Southern California, 1985.[3]	E. H. Spafford, Computer viruses as Artificial Life, Journal of Artificial Life, 1(3), pp. 249-265, MIT Press, 1994.[4]	J. Aycock. Computer Viruses and Malware. Springer, 2006.[5]	S. Pearce. Viral polymorphism. Sans Institute, 2003.[6]	M. Z. Shafiq, S. M. Tabish, and M. Farooq. On the appropriateness of evolutionary rule learning algorithms for malware detection. In GECCO ’09: Proceedings of the 11th Annual Conference on Genetic and Evolutionary Computation, pages 2609–2616, 2009.[7]	M. G. Schultz, E. Eskin, E. Zadok, and S. J. Stolfo. Data mining methods for detection of new malicious executables. In SP ’01: Proceedings of the 2001 IEEE Symposium on Security and Privacy, page 38, 2001.[8]	G. Tesauro, J. Kephart, and G. Sorkin. Neural networks for computer virus recognition. IEEE Expert, 11(4):5–6, 1996.[9]	D. Bruschi, L. Martignoni, and M. Monga. Detecting self-mutating malware using control-flow graph matching. In DIMVA ’06: Proceedings of the Conference on the Detection of Intrusions and Malwares and Vulnerability Assessment, pages 129–143, 2006.[10]	E. W. Myers. An o(nd) difference algorithm and its variations. Algorithmica, 1986.[11]	T. Apiwattanapong, A. Orso, and M. J. Harrold. A differencing algorithm for object-oriented programs. ASE'04.[12]	D. Jackson and D. A. Ladd. Semantic diff: A tool for summarizing the effects of modifications. In ICSM'94.[13]	J. Laski and W. Szermer. Identification of program modifications and its applications in software maintenance. CSM'92.[14]	Walenstein, R. Mathur, M. R. Chouchane, and A. Lakhotia. Normalizing metamorphic malware using term rewriting. SCAM'06.[15]	K. Edge, B. Lamont, R. Raines .A retrovirus Inspired Algorithm for virus detection and Optimization. GECCO'2006[16]	K. Kim and B. Moon. Malware Detection based on Dependency Graph using Hybrid Genetic Algorithm, GECCO'2010[17]	R. Raines .An Algorithm for virus detection and Optimization inspired on retroviruses. GECCO'2006[18]	S. Noreen, S. Murtaza, M. Shafiq and M. Farroq, Evolvable Malware. ACM 2009[19]	M. Z. Shafiq, S. M. Tabish, and M. Farooq. On the appropriateness of evolutionary rule learning algorithms for malware detection. In GECCO ’09: Proceedings of the 11th Annual Conference on Genetic and Evolutionary Computation, pages 2609–2616, 2009.[20]	J. Alcala, L. Sanchez, S. Garcia, M de Jesus, C. Romero, J. Bacardit, KEEL: a software tool to asses evolutionary algorithms for data mining problems. Springer’09[21]	M. G. Schultz, E. Eskin, E. Zadok, and S. J. Stolfo. Data mining methods for detection of new malicious executables. In SP ’01: Proceedings of the 2001 IEEE Symposium on Security and Privacy, page 38, 2001.[22]	L. Bergroth, L. Hakonen, H. Raita, A survey of longest common subsequence algorithms. SPIRE’00[23]	Dan Gusfiled, Algorithms on String, Trees and Sequences; Computer Science and Computations Biology. USA, Cambridge University Press 1999[24]	D. Maier, The complexity of some problems on Subsequences and Supersequences. ACM Press 1978[25]	G. Navarro, A guided tour to approximate string matching. ACM’01[26]	D. Sankoof, Matching sequences under deletion/insertion constraints. National Academy of Sciences of USA. 1972[27]	F. Temple and S. Waterman, Identification of common molecular subsequences. Journal of Molecular Biology[28]	Steve Skiena, Algorithm Design Manual. Springer 1998.[29]	R. Wagner, M. Fisher, The string-to-string correction problem. ACM Journal 21, 1974[30]	R. Boyer J. Moore, A fast string search algorithm. ACM 1977[31]	M. Christodorescu, S. Jga. Static Analysis of Executables to detect Malicious Patterns.  WISC’03[32]	Darwin's Theory of Evolution - A Theory in Crisis. Available at http://www.darwins-theory-of-evolution.com/[33]	J. Holland, Adaptation in Natural and Artificial Systems. University of Michigan press, 1975.[34]	Goldberg, David E. Genetic Algorithms in Search, Optimization, and Machine Learning. Boston, Mass. U.A: Addison-Wesley, 2009. Print.[35]	Mitchell, Melanie. An Introduction to Genetic Algorithms. Cambridge, MA: MIT, 2001. Print. [36]	Netherland Net Labs - virus signature strings. Available at http://www.nlnetlabs.nl/downloads/antivirus/antivirus/virussignatures.strings
+[1]	F-Secure Virus Encyclopedia, available at http://www.f-secure.com/en_EMEA-Labs/virus-encyclopedia/articles/about-viruses/
+
+[2]	F. Cohen, Computer Viruses, PhD thesis, University of Southern California, 1985.
+
+[3]	E. H. Spafford, Computer viruses as Artificial Life, Journal of Artificial Life, 1(3), pp. 249-265, MIT Press, 1994.
+
+[4]	J. Aycock. Computer Viruses and Malware. Springer, 2006.
+
+[5]	S. Pearce. Viral polymorphism. Sans Institute, 2003.
+
+[6]	M. Z. Shafiq, S. M. Tabish, and M. Farooq. On the appropriateness of evolutionary rule learning algorithms for malware detection. In GECCO ’09: Proceedings of the 11th Annual Conference on Genetic and Evolutionary Computation, pages 2609–2616, 2009.
+
+[7]	M. G. Schultz, E. Eskin, E. Zadok, and S. J. Stolfo. Data mining methods for detection of new malicious executables. In SP ’01: Proceedings of the 2001 IEEE Symposium on Security and Privacy, page 38, 2001.
+
+[8]	G. Tesauro, J. Kephart, and G. Sorkin. Neural networks for computer virus recognition. IEEE Expert, 11(4):5–6, 1996.
+
+[9]	D. Bruschi, L. Martignoni, and M. Monga. Detecting self-mutating malware using control-flow graph matching. In DIMVA ’06: Proceedings of the Conference on the Detection of Intrusions and Malwares and Vulnerability Assessment, pages 129–143, 2006.
+
+[10]	E. W. Myers. An o(nd) difference algorithm and its variations. Algorithmica, 1986.
+
+[11]	T. Apiwattanapong, A. Orso, and M. J. Harrold. A differencing algorithm for object-oriented programs. ASE'04.
+
+[12]	D. Jackson and D. A. Ladd. Semantic diff: A tool for summarizing the effects of modifications. In ICSM'94.
+
+[13]	J. Laski and W. Szermer. Identification of program modifications and its applications in software maintenance. CSM'92.
+
+[14]	Walenstein, R. Mathur, M. R. Chouchane, and A. Lakhotia. Normalizing metamorphic malware using term rewriting. SCAM'06.
+
+[15]	K. Edge, B. Lamont, R. Raines .A retrovirus Inspired Algorithm for virus detection and Optimization. GECCO'2006
+[16]	K. Kim and B. Moon. Malware Detection based on Dependency Graph using Hybrid Genetic Algorithm, GECCO'2010
+
+[17]	R. Raines .An Algorithm for virus detection and Optimization inspired on retroviruses. GECCO'2006
+
+[18]	S. Noreen, S. Murtaza, M. Shafiq and M. Farroq, Evolvable Malware. ACM 2009
+
+[19]	M. Z. Shafiq, S. M. Tabish, and M. Farooq. On the appropriateness of evolutionary rule learning algorithms for malware detection. In GECCO ’09: Proceedings of the 11th Annual Conference on Genetic and Evolutionary Computation, pages 2609–2616, 2009.
+
+[20]	J. Alcala, L. Sanchez, S. Garcia, M de Jesus, C. Romero, J. Bacardit, KEEL: a software tool to asses evolutionary algorithms for data mining problems. Springer’09
+
+[21]	M. G. Schultz, E. Eskin, E. Zadok, and S. J. Stolfo. Data mining methods for detection of new malicious executables. In SP ’01: Proceedings of the 2001 IEEE Symposium on Security and Privacy, page 38, 2001.
+
+[22]	L. Bergroth, L. Hakonen, H. Raita, A survey of longest common subsequence algorithms. SPIRE’00
+
+[23]	Dan Gusfiled, Algorithms on String, Trees and Sequences; Computer Science and Computations Biology. USA, Cambridge University Press 1999
+
+[24]	D. Maier, The complexity of some problems on Subsequences and Supersequences. ACM Press 1978
+
+[25]	G. Navarro, A guided tour to approximate string matching. ACM’01
+
+[26]	D. Sankoof, Matching sequences under deletion/insertion constraints. National Academy of Sciences of USA. 1972
+
+[27]	F. Temple and S. Waterman, Identification of common molecular subsequences. Journal of Molecular Biology
+
+[28]	Steve Skiena, Algorithm Design Manual. Springer 1998.
+
+[29]	R. Wagner, M. Fisher, The string-to-string correction problem. ACM Journal 21, 1974
+
+[30]	R. Boyer J. Moore, A fast string search algorithm. ACM 1977
+
+[31]	M. Christodorescu, S. Jga. Static Analysis of Executables to detect Malicious Patterns.  WISC’03
+
+[32]	Darwin's Theory of Evolution - A Theory in Crisis. Available at http://www.darwins-theory-of-evolution.com/
+
+[33]	J. Holland, Adaptation in Natural and Artificial Systems. University of Michigan press, 1975.
+
+[34]	Goldberg, David E. Genetic Algorithms in Search, Optimization, and Machine Learning. Boston, Mass. U.A: Addison-Wesley, 2009. Print.
+
+[35]	Mitchell, Melanie. An Introduction to Genetic Algorithms. Cambridge, MA: MIT, 2001. Print. 
+
+[36]	Netherland Net Labs - virus signature strings. Available at http://www.nlnetlabs.nl/downloads/antivirus/antivirus/virussignatures.strings
